@@ -4,9 +4,10 @@ echo "tar -zxvf SN986_1.60_QR_Scan_019a_20160606_0951.tgz"
 echo "cd SN986_1.60_QR_Scan_019a_20160606_0951"
 echo "./sdk.unpack"
 echo "cd snx_sdk"
-echo "cd buildscript"
-echo "make sn98660_QR_Scan_402mhz_sf_defconfig"
-echo "make all"
+echo "mkdir patch"
+echo "Place PwnHack in the folder 'Patch'"
+echo "cd patch"
+echo "./patch.sh" 
 
 echo -e "** Xiaomi Xiaofang Custom firmware builder script **\n"
 
