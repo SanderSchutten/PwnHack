@@ -21,7 +21,7 @@ mkdir ../snx_sdk/rootfs
 mkdir ../snx_sdk/rootfs-rescue
 
 echo "Patching SDK files"
-/bin/cp  -f -r ./snx_sdk ../
+/bin/cp  -f -r ./snx_sdk/* ../snx_sdk/
 echo -e " Done\n"
 
 echo -e "Extracting firmware rootfs files"
@@ -82,6 +82,7 @@ echo -e "\tDone\n"
 cd ../snx_sdk/buildscript/
 
 make firmware
+#make
 
 echo -e "\n\n*******************************************************************"
 echo -e "Copy the file FIRMWARE660-R.bin onto the root of an SDCard."
