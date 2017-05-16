@@ -11,12 +11,14 @@ echo "./patch.sh"
 
 echo -e "** Xiaomi Xiaofang Custom firmware builder script **\n"
 
+
+
 echo -e "Clean SDK"
 /bin/rm -f -r ../snx_sdk/sdcard
 mkdir ../snx_sdk/sdcard
 cd ../snx_sdk/buildscript/
 make clean
-cd ../../patch/ 
+cd ../../PwnHack/
 mkdir ../snx_sdk/rootfs
 mkdir ../snx_sdk/rootfs-rescue
 
@@ -45,6 +47,7 @@ echo "Patching rootfs files"
 /bin/cp  -f -r  rootfs/* /tmp/rootfs
 echo -e " Done\n"
 
+
 echo "Applying fanghack"
 /bin/cp  -f -r  ./fanghack/rootfs/* /tmp/rootfs
 /bin/cp  -f -r  ./fanghack/sdcard/* ../snx_sdk/sdcard/
@@ -65,6 +68,7 @@ echo "Providing nvram.bin"
 /bin/cp -f ./needed/nvram.bin ../snx_sdk/image/
 #/bin/cp -f ./needed/u-boot.bin ../snx_sdk/image/
 echo -e " Done\n"
+
 
 echo "Copying KERNEL.bin from source firmware"
 /bin/cp -f ./3.0.3.56/KERNEL.bin ../snx_sdk/image/
